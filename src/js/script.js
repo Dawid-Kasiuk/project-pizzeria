@@ -82,13 +82,13 @@
       const clickedProduct = thisProduct.element;
       console.log(clickedProduct);
       /* START: click event listener to trigger */
-      clickedProduct.addEventListener('click', function(){
+      clickedProduct.querySelector('.product__header').addEventListener('click', function(){
         /* prevent default action for event */
         event.preventDefault();
         /* toggle active class on element of thisProduct */
         clickedProduct.classList.toggle('active');
         /* find all active products */
-        const activeClickedProducts = document.querySelectorAll('.active');
+        const activeClickedProducts = document.querySelectorAll('.product.active');
         console.log(activeClickedProducts);
         /* START LOOP: for each active product */
         for (let activeClickedProduct of activeClickedProducts) {
